@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="loader">
+			<div class="bg"></div>
+			<h2>loading...</h2>
+		</div>
+	</body>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.loader{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.bg{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #333;
+			animation: animate 6s ease-in-out infinite;
+			
+		}
+		h2{
+			color: #fff;
+			z-index: 1;
+			font-size: 6em;
+			font-weight: 800;
+		}
+		@keyframes animate{
+			0%{
+				transform: scaleX(0);
+				transform-origin: left;
+				background-color: #ffe652;
+			}
+			25%{
+				transform: scaleX(1);
+				transform-origin: left;
+				background-color: #ffc848;
+			}
+			25.001%{
+				transform: scaleX(1);
+				transform-origin: right;
+				background-color: #ffaa49;
+			}
+			50%{
+				transform: scaleX(0);
+				transform-origin: right;
+				background-color: #ff8c51;
+			}
+			75%{
+				transform: scaleX(1);
+				transform-origin: right;
+				background-color: #ff705c;
+			}
+			75.001%{
+				transform: scaleX(1);
+				transform-origin: left;
+				background-color: #ff5e68;
+			}
+			100%{
+				transform: scaleX(0);
+				transform-origin: left;
+				background-color: #ff4b78;
+			}
+		}
+	</style>
+</html>
